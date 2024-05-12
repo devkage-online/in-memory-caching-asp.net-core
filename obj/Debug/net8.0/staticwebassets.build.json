@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "I9zh8dMoq/HH9ubeXVGvyd2pV2Y5LWMXmR6dQKhHNd0=",
+  "Source": "in-memory-caching-weather-forecast",
+  "BasePath": "_content/in-memory-caching-weather-forecast",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

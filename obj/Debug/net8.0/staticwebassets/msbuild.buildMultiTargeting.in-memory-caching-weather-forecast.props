@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="../build/in-memory-caching-weather-forecast.props" />
+</Project>
