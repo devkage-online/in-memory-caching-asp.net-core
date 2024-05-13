@@ -59,7 +59,31 @@ app.MapGet("/weatherforecast", (IMemoryCache memoryCache) =>
 // mengambil data dari cache
 app.MapGet("/cacheforecast", (IMemoryCache memoryCache) =>
     {
-        var cacheEntry = memoryCache.Get<WeatherForecast[]?>("forecastData");
+        // Mengakses Cache
+        // var cacheEntry = memoryCache.Get<WeatherForecast[]?>("forecastData");
+
+        // Mengakses Cache atau Membuat Cache  
+        var cacheData = Enumerable.Range(1, 5).Select(index =>
+            new WeatherForecast
+            (
+                DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
+                Random.Shared.Next(-20, 55),
+                summaries[Random.Shared.Next(summaries.Length)],
+                DateTime.Now
+            ))
+            .ToArray();
+
+        memoryCache.Remove("forecastData");
+
+        var cacheEntry = memoryCache.GetOrCreate(
+            "forecastData",
+            cacheEntry =>
+            {
+                cacheEntry.SlidingExpiration = TimeSpan.FromSeconds(15);
+                cacheEntry.SetAbsoluteExpiration(TimeSpan.FromSeconds(60)); // best practice
+                cacheEntry.SetSize(2); // best practice
+                return cacheData;
+            });
         return cacheEntry!.ToList();
     }
 )

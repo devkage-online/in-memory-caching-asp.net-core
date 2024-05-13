@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("in-memory-caching-weather-forecast")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+39be166ed75bdbad5520ac2abcc8b41fc6d8b48d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+85a5843bdf67b2459e09d7492b28ce70c708e907")]
 [assembly: System.Reflection.AssemblyProductAttribute("in-memory-caching-weather-forecast")]
 [assembly: System.Reflection.AssemblyTitleAttribute("in-memory-caching-weather-forecast")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
